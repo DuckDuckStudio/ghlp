@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        // 文件布局
+        "module": "nodenext",
+        "target": "esnext",
+        "resolveJsonModule": true,
+        "types": [],
+
+        // 其他输出
+        "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
+
+        // 更严格的类型检查选项
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+
+        // 样式选项
+        "noImplicitReturns": true,
+        "noImplicitOverride": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noPropertyAccessFromIndexSignature": true,
+
+        // 推荐选项
+        "strict": true,
+        "jsx": "react-jsx",
+        "verbatimModuleSyntax": true,
+        "isolatedModules": true,
+        "noUncheckedSideEffectImports": true,
+        "moduleDetection": "force",
+        "skipLibCheck": true
+    }
+}

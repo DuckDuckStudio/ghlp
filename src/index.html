@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GitHub 用户语言成分分析</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+        <base target="_blank">
+    </head>
+    <body>
+        <main class="container">
+            <header class="header">
+                <h1>查查你在 GitHub 上的编程语言成分</h1>
+                <p class="subtitle">输入 GitHub 用户名，查看其在 GitHub 上的编程语言成分</p>
+            </header>
+
+            <form id="search-form" class="search-bar">
+                <input type="text" id="username-input" autocomplete="off" required />
+                <button type="submit" id="search-btn">查询</button>
+                <details>
+                    <summary>其他设置</summary>
+                    <label class="token-field" for="token-input">
+                        <span>GitHub Token（可选，如果该用户下的仓库数<a href="https://docs.github.com/zh/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2026-03-10#primary-rate-limit-for-unauthenticated-users" title="超过了 GitHub REST API 未认证用户的首要速率限制" target="_blank">超过 60 个</a>则需要）</span>
+                        <input type="password" id="token-input" placeholder="输入 Token 以提高 API 请求限额" autocomplete="off" />
+                    </label>
+                    <label class="repo-limit-field" for="repo-limit-input">
+                        <span>最大统计仓库数（留空不限制；最大为<span id="repo-limit-max">60</span>）</span>
+                        <input type="number" id="repo-limit-input" min="1" max="60" step="1" placeholder="留空表示不限制" />
+                    </label>
+                </details>
+            </form>
+
+            <div id="status" class="status" hidden></div>
+
+            <section id="result" class="result" hidden>
+                <div class="chart-card">
+                    <canvas id="lang-chart"></canvas>
+                </div>
+                <div class="legend-card">
+                    <h2 id="user-title"></h2>
+                    <ul id="lang-list" class="lang-list"></ul>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>由鸭鸭「カモ」制作，源代码见 <a href="https://github.com/DuckDuckStudio/ghlp" target="_blank">GitHub</a></p>
+            </footer>
+        </main>
+
+        <script type="module" src="main.mjs"></script>
+    </body>
+</html>

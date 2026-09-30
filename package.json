@@ -1,0 +1,35 @@
+{
+    "name": "ghlp",
+    "description": "显示你在 GitHub 上的代码语言成分。",
+    "author": "鸭鸭「カモ」",
+    "license": "Apache-2.0",
+    "readme": "README.md",
+    "bugs": {
+        "url": "https://github.com/DuckDuckStudio/ghlp/issues"
+    },
+    "repository": {
+        "url": "git+https://github.com/DuckDuckStudio/ghlp.git",
+        "type": "git"
+    },
+    "type": "module",
+    "scripts": {
+        "lint": "npx eslint . --rule \"semi: [error, always]\" --max-warnings 0",
+        "build": "npx tsc && npx sass src/styles.scss src/styles.css",
+        "serve": "npm run build && npx serve src/"
+    },
+    "devDependencies": {
+        "@eslint/css": "^2.0.0",
+        "@eslint/js": "^10.0.1",
+        "@eslint/json": "^2.1.0",
+        "@eslint/markdown": "^8.0.3",
+        "eslint": "^10.11.0",
+        "globals": "^17.12.0",
+        "sass": "^1.105.0",
+        "serve": "^14.2.6",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.70.1"
+    },
+    "dependencies": {
+        "chart.js": "^4.5.1"
+    }
+}

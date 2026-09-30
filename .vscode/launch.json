@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "npm: build",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "build"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "npm: lint",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "lint"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "npm: serve",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "serve"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}

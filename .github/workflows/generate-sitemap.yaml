@@ -1,0 +1,29 @@
+name: 生成 Sitemap
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/**/*.html"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate_sitemap:
+    name: 生成网站地图
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 更新网站地图
+        uses: DuckDuckStudio/Sitemap_Creator@7e77c95ddeafa1851c1c092c3a2019c64517ab4f # 2.0.2
+        with:
+          file_type: "html"
+          label: "DEV-已启用自动合并,工作流,DEV-开发分支合并"
+          auto_merge: "压缩合并"
+          debug: true
+          website_path: "src/"
+          location: "src/sitemap.xml"

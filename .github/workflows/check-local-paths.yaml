@@ -1,0 +1,18 @@
+name: 检查本地路径
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions: {}
+
+jobs:
+  check-local-paths:
+    name: 检查本地路径
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检查本地路径
+        uses: DuckDuckStudio/Check_Locale_Paths@eea7b8eac6450398a5558ab3b9e1bb9698bfc461 # 3.0.2
