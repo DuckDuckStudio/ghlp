@@ -23,7 +23,7 @@
         "@eslint/json": "^2.1.0",
         "@eslint/markdown": "^8.0.3",
         "eslint": "^10.12.0",
-        "globals": "^17.12.0",
+        "globals": "^17.13.0",
         "sass": "^1.105.0",
         "serve": "^14.2.6",
         "typescript": "^6.0.3",
