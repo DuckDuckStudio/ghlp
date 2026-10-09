@@ -62,7 +62,7 @@ async function fetchLanguages(username: string, token: string, maxRepos: number 
                 throw getRateLimitError(repoResponse);
             default:
                 if (!repoResponse.ok) {
-                    throw new Error(`获取用于仓库信息失败（HTTP ${repoResponse.status}）`);
+                    throw new Error(`获取用户仓库信息失败（HTTP ${repoResponse.status}）`);
                 }
         }
 
