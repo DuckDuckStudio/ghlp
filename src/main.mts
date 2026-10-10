@@ -84,6 +84,8 @@ async function fetchLanguages(username: string, token: string, maxRepos: number 
             case 403:
             case 429:
                 throw getRateLimitError(languageResponse);
+            case 451:
+                continue;
             default:
                 if (!languageResponse.ok) {
                     throw new Error(`获取仓库语言信息失败（HTTP ${languageResponse.status}）`);
