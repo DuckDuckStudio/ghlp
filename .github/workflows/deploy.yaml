@@ -34,18 +34,16 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: 设置 Node.js
-        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - name: 设置 pnpm 和 Node.js
+        uses: pnpm/setup@e0ed22ae4d909f13ed5d2688513f73e1875e46db # v3.0.0
         with:
-          node-version: latest
-
-      - name: 安装依赖
-        shell: bash
-        run: npm ci
+          runtime: "node@latest"
+          install: true
+          require-lockfile: true
 
       - name: 构建项目
         shell: bash
-        run: npm run build
+        run: pnpm run build
 
       - name: 设置页面
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
