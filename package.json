@@ -13,9 +13,9 @@
     },
     "type": "module",
     "scripts": {
-        "lint": "npx eslint . --rule \"semi: [error, always]\" --max-warnings 0",
-        "build": "npx tsc && npx sass src/styles.scss src/styles.css",
-        "serve": "npm run build && npx serve src/"
+        "lint": "eslint . --rule \"semi: [error, always]\" --max-warnings 0",
+        "build": "tsc && sass src/styles.scss src/styles.css",
+        "serve": "pnpm run build && serve src/"
     },
     "devDependencies": {
         "@eslint/css": "^2.0.0",
@@ -32,5 +32,12 @@
     "dependencies": {
         "chart.js": "^4.5.1"
     },
-    "packageManager": "pnpm@12.10.1"
+    "devEngines": {
+        "packageManager": {
+            "name": "pnpm",
+            "version": "12.11.2",
+            "onFail": "download"
+        }
+    },
+    "packageManager": "pnpm@12.11.2"
 }
