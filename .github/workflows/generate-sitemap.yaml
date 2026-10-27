@@ -22,7 +22,7 @@ jobs:
         uses: DuckDuckStudio/Sitemap_Creator@7e77c95ddeafa1851c1c092c3a2019c64517ab4f # 2.0.2
         with:
           file_type: "html"
-          label: "DEV-已启用自动合并,工作流,DEV-开发分支合并"
+          label: "DEV-开发分支合并"
           auto_merge: "压缩合并"
           debug: true
           website_path: "src/"
